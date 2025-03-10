@@ -1,0 +1,310 @@
+
+  .contact-list {
+      margin-top: 1.9em
+  }
+
+  .contact-list li {
+      margin-bottom: 1em
+  }
+
+  .contact-list li a {
+      display: flex;
+      align-items: center;
+      transition: var(--easing-1);
+  }
+
+  .contact-list li a svg {
+      width: 32px;
+      height: 32px;
+      min-width: 32px;
+      margin-right: .5em;
+      border-radius: 50%;
+      background-color: #fff;
+      transition: var(--easing-1)
+  }
+
+  .contact-list li a svg path {
+    fill: var(--color-accent-1);
+    transition: var(--easing-1)
+}
+
+.contact-list li a span {
+    line-break: anywhere;
+    transition: var(--easing-1)
+}
+
+.contact-list li a:hover svg {
+    background-color: var(--color-accent-1);
+}
+
+.contact-list li a:hover svg path {
+    fill: #fff
+}
+
+.contact-list li a:hover span {
+    color: var(--color-dark-1);
+}
+
+.floating-label {
+    position: relative
+    }
+    
+    .floating-label label,
+    .highlight {
+    position: absolute;
+    pointer-events: none
+    }
+    
+    .floating-input,
+    .floating-select {
+    padding: 1em 1.3em 1.2em;
+    display: block; 
+    max-width: 100%;
+    width: -moz-available;
+    width: -webkit-fill-available;
+    background-color: var(--color-light-1);
+    border-radius: 8px;
+    border: 1px solid #8282827a;
+    font-size: 14px;
+    color: var(--color-text)
+    }
+    
+    .floating-input:focus,
+    .floating-select:focus {
+    outline: 0;
+    border: 1px solid var(--color-accent-1)
+    }
+    
+    .floating-label label {
+    color: var(--color-text);
+    font-size: 14px;
+    font-weight: 400;
+    left: 1.3em;
+    top: 1.8em;
+    transform: translateY(-50%);
+    transition: .2s;
+    -moz-transition: .2s;
+    -webkit-transition: .2s
+    }
+    
+    .floating-input:focus~label,
+    .floating-input:not(:placeholder-shown)~label,
+    .floating-select:focus~label,
+    .floating-select:not([value=""]):valid~label {
+        top: 0;
+        font-size: 75%;
+        color: var(--color-heading);
+        background: var(--color-light-2);
+    }
+    
+    .floating-input:focus~.bar:after,
+    .floating-input:focus~.bar:before,
+    .floating-select:focus~.bar:after,
+    .floating-select:focus~.bar:before {
+    width: 50%
+    }
+    
+    .floating-textarea {
+    overflow: hidden;
+    margin-bottom: .3em;
+    } 
+    
+    .highlight {
+    height: 50%;
+    width: 100%;
+    top: 15%;
+    left: 0;
+    opacity: .5
+    }
+
+    @media(min-width:767px) {
+        .contact-list li a svg {
+            width: 52px;
+            height: 52px;
+            min-width: 52px;
+            margin-right: 1em;
+        }
+        .floating-input,
+        .floating-select {
+        padding: 1.3em 1.3em
+        }
+        .floating-label label {
+            top: 2em;
+            }
+    }
+
+/* Checkbox
+------------------------------------------------- */
+
+    input[type=checkbox]+label {
+        cursor:pointer;
+        display:block
+      }
+      input[type=checkbox] {
+        display:none
+      }
+      input[type=checkbox]+label:before {
+        position: relative;
+        content: "✔";
+        border: 0.1em solid var(--color-dark-2);
+        vertical-align: bottom;
+        background-color: var(--color-light-1);
+        color: transparent;
+        border-radius: 8px;
+        margin-right: 0.5em;
+        padding: 0.13em 0.5em;
+        transition: all 0.2s;
+        display: inline-block;
+        transform: translateY(0.25em);
+        line-height: 1.5;
+      }
+      input[type=checkbox]:checked+label:before {
+        background-color:var(--color-accent-1);
+        border-color:var(--color-accent-1);
+        color: #fff
+      }
+    
+
+  :root {
+    --errorColor: red;
+    --stepNumber: 5;
+}
+
+.form-outer {
+    overflow: hidden;
+}
+
+.form-outer form {
+    display: flex;
+    width: calc(100% * var(--stepNumber));
+    overflow: hidden;
+}
+.form-outer form .page {
+    width: calc(100% / var(--stepNumber));
+    transition: margin-left 0.3s ease-in-out;
+}
+.form-outer form .page .title {
+    text-align: left;
+    font-size: 25px;
+    font-weight: 500;
+}
+form .page .label {
+    position: absolute;
+    top: -30px;
+    font-weight: 500;
+}
+form .page .invalid-input {
+    border-color: var(--errorColor);
+}
+
+.progress-bar {
+    display: flex;
+    margin: 1em 0 .25em;
+    justify-content: left;
+    user-select: none;
+}
+.progress-bar .step {
+    width: 100%;
+    position: relative;
+}
+.progress-bar .step .bullet {
+    height: 30px;
+    width: 30px;
+    border: 1px solid var(--color-border);
+    border-radius: 50%;
+    position: relative;
+    transition: 0.2s;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 30px;
+    color: var(--color-dark-1);
+}
+.progress-bar .step .bullet.active {
+    border-color: var(--color-accent-1);
+    background: var(--color-accent-1);
+    color: #fff;
+}
+.progress-bar .step .bullet span {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.progress-bar .step .bullet:before,
+.progress-bar .step .bullet:after {
+    position: absolute;
+    content: "";
+    bottom: 15px;
+    left: 80%;
+    height: 1px;
+    width: 3em;
+    background: var(--color-border);
+    transform: translateX(50%);
+}
+.progress-bar .step .bullet:after {
+    width: 0;
+}
+.progress-bar .step .bullet.active:after {
+    background: var(--color-accent-1);
+    width: 3em;
+    transition: 0.3s ease-in-out;
+}
+
+.progress-bar .step:last-child .bullet:before,
+.progress-bar .step:last-child .bullet:after {
+    display: none;
+}
+
+.progress-bar .step .check {
+    position: absolute;
+    left: 50%;
+    top: 70%;
+    font-size: 15px;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+.progress-bar .step .check.active {
+    display: block;
+    color: #fff;
+}
+
+@media screen and (max-width: 768px) {
+    :root {
+        --containerWidth: 400px;
+    }
+    .progress-bar {
+        margin: 0 0 0;
+    }
+    .progress-bar .step p {
+        display: none;
+    }
+    .progress-bar .step .bullet::after,
+    .progress-bar .step .bullet::before {
+        display: none;
+    }
+    .progress-bar .step .bullet {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .progress-bar .step .check {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        font-size: 15px;
+        transform: translate(-50%, -50%);
+        display: none;
+    }
+    .step {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .button-anim.next .button-anim-text,
+    .button-anim.prev .button-anim-text {
+        font-size: 80%;
+    }
+    .button-anim.next .button-anim-icon,
+    .button-anim.prev .button-anim-icon {
+        padding: 0.55em 0.5em 0.25em;
+    }
+}

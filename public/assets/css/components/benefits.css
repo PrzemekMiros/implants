@@ -1,0 +1,52 @@
+.benefit-card {
+  position: relative;
+  height: 100%;
+}
+
+.benefit-card h3 {
+  position: relative;
+}
+
+.bc-light {
+  z-index: 1;
+}
+
+.bc-light .benefit-card-svg {
+  z-index: 0;
+}
+
+.benefit-card::before {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  left: 0;
+  width: calc(100% - 2px);
+  height: 65%;
+  background: var(--color-light-3);
+  border-top: none;
+  border-bottom-left-radius: var(--radius-2);
+  border-bottom-right-radius: var(--radius-2);
+  z-index: 0;
+}
+
+.bc-light::before {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  left: 0px;
+  width: 100%;
+  height: 72%;
+  border: none;
+  border-radius: var(--radius-2);
+  background-color: var(--color-accent-1);
+  z-index: -1;
+}
+
+.benefit-card-svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  z-index: 0;
+}

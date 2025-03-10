@@ -1,0 +1,26 @@
+
+@use 'base/grid.scss';
+@use 'base/colors.scss';
+@use 'base/global.scss';
+@use 'base/transition-fade.scss';
+@use 'base/spacings.scss';
+@use 'base/typography.scss';
+@use 'base/lenis.scss';
+@use 'components/noise.scss';
+@use 'components/lines.scss';
+
+@use 'components/header.scss';
+@use 'components/button.scss';
+
+@use 'components/hero.scss';
+@use 'components/post.scss';
+@use 'components/works.scss';
+@use 'components/steps.scss';
+@use 'components/faq.scss';
+@use 'components/sidebar.scss';
+@use 'components/blog.scss';
+
+@use 'components/form.scss';
+@use 'components/footer.scss';
+
+@use 'syntax/prism-coldark-dark.scss'; 

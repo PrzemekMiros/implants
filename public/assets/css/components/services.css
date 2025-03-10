@@ -1,0 +1,35 @@
+.service-wrap {
+  position: relative;
+  border-radius: 25px;
+  border-top-left-radius: 0;
+}
+
+.service-wrap-svg {
+  position: relative;
+  margin-bottom: -0.5em;
+  width: 100%;
+  height: auto;
+  z-index: 9;
+}
+
+.service-card {
+  border-radius: 20px;
+  background: var(--color-light-1);
+}
+
+.service-card img {
+  display: inline-block;
+  width: 50px;
+  padding: 0.4em;
+  border-radius: 50%;
+  background: var(--color-light-3);
+}
+
+@media (min-width: 767px) {
+  .service-card {
+    min-height: 130px;
+  }
+  .service-card img {
+    width: 80px;
+  }
+}

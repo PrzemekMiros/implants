@@ -1,0 +1,111 @@
+.transition-overlay {
+  transform: translate(0, 0);
+  transition: 0.7s ease-in-out;
+}
+
+html.is-animating .transition-overlay {
+  transform: translate(0, 60px);
+}
+
+html.is-leaving .transition-overlay {
+  transform: translate(0, -60px);
+}
+
+@-webkit-keyframes page-overlay-anim {
+  0% {
+    transform: translate(0, 100%);
+  }
+  45% {
+    transform: translate(0, 0%);
+  }
+  54% {
+    transform: translate(0, 0%);
+  }
+  100% {
+    transform: translate(0, -100%);
+  }
+}
+@-moz-keyframes page-overlay-anim {
+  0% {
+    transform: translate(0, 100%);
+  }
+  45% {
+    transform: translate(0, 0%);
+  }
+  54% {
+    transform: translate(0, 0%);
+  }
+  100% {
+    transform: translate(0, -100%);
+  }
+}
+@-o-keyframes page-overlay-anim {
+  0% {
+    transform: translate(0, 100%);
+  }
+  45% {
+    transform: translate(0, 0%);
+  }
+  54% {
+    transform: translate(0, 0%);
+  }
+  100% {
+    transform: translate(0, -100%);
+  }
+}
+@keyframes page-overlay-anim {
+  0% {
+    transform: translate(0, 100%);
+  }
+  45% {
+    transform: translate(0, 0%);
+  }
+  54% {
+    transform: translate(0, 0%);
+  }
+  100% {
+    transform: translate(0, -100%);
+  }
+}
+.page-overlay-in {
+  display: block !important;
+  transform: translate(0, 100%);
+}
+
+html.is-changing .page-overlay-in {
+  -webkit-animation: page-overlay-anim 1.45s 1; /* Safari 4+ */
+  -moz-animation: page-overlay-anim 1.45s 1; /* Fx 5+ */
+  -o-animation: page-overlay-anim 1.45s 1; /* Opera 12+ */
+  animation: page-overlay-anim 1.45s 1; /* IE 10+, Fx 29+ */
+  animation-timing-function: cubic-bezier(0.49, 0.16, 0.33, 1);
+}
+
+.page-overlay-in {
+  z-index: 9999999;
+  height: 100vh;
+  background-color: var(--color-dark-1);
+  display: none;
+  position: fixed;
+  top: 0%;
+  bottom: auto;
+  left: 0%;
+  right: 0%;
+}
+
+.page-overlay-out {
+  z-index: 9999999;
+  height: 100vh;
+  background-color: var(--color-accent-1);
+  display: none;
+  position: fixed;
+  top: 0%;
+  bottom: auto;
+  left: 0%;
+  right: 0%;
+}
+
+.swup-progress-bar {
+  height: 4px;
+  background-color: var(--color-accent-1);
+  z-index: 999999;
+}

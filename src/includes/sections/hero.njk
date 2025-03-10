@@ -1,0 +1,47 @@
+<section class="hero pt-medium pb-large" data-scroll-section>
+  <div class="container">
+    <div class="first-post">
+      <div class="first-post-image">
+        <img src="/content/posts/img/czego-sie-spodziewac.jpg" alt="">
+      </div>
+      <div class="first-post-content">
+        <h1 class="xl">
+          Implanty stomatologiczne 
+        </h1>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .first-post {
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+  }
+  .first-post-image {
+    position: relative;
+  }
+  .first-post-image::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #00131c;
+  opacity: .8;
+  mix-blend-mode: multiply;
+  }
+  .first-post-image img {
+    aspect-ratio: 4/2;
+    object-fit: cover;
+  }
+  .first-post-content {
+    position: absolute;
+    width: 63%;
+    bottom: 2em;
+    left: 2em;
+  }
+</style>
+

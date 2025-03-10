@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="generator" content="Eleventy"/>
+
+    <title>{{ title }} - Implanty Stomatologiczne Legionowo</title>
+    <meta name="description" content="{{ description }}">
+    {% set robots = robots | default('index') %}
+    <meta name="robots" content="{{ robots }}">
+
+    <!-- Facebook Meta Tags -->
+    <meta property="og:url" content="https://implantylegionowo.pl/">
+    <meta property="og:type" content="website"> 
+    <meta property="og:title" content="{{ title }}">
+    <meta property="og:description" content="{{ description }}">
+    <meta property="og:image" content="https://implantylegionowo.pl/assets/img/opengraph.jpg">
+    <meta property="og:site_name" content="Implanty Stomatologiczne Legionowo" />
+ 
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="twitter:domain" content="implantylegionowo.pl">
+    <meta property="twitter:url" content="https://implantylegionowo.pl/">
+    <meta name="twitter:title" content="{{ title }}">
+    <meta name="twitter:description" content="{{ description }}">
+    <meta name="twitter:image" content="https://implantylegionowo.pl/assets/img/opengraph.jpg">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon/favicon.svg">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon/favicon.svg">
+    <link rel="mask-icon" href="/assets/img/favicon/favicon.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="{{ '/assets/css/style.css' | url }}">
+    <link rel="stylesheet" href="/static/cookieconsent.css" media="print" onload="this.media='all'">
+
+    <style>  
+      .preloader {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        width: 100%;
+        height: 100vh;
+        background: var(--color-light-1);
+        transition: all 0.2s ease-out;
+        overflow: hidden;
+        pointer-events: none;
+        z-index: 10000000;
+      }
+      .preloader_inner {
+        position: absolute;
+        top: 48%;
+        left: 50%;
+        transform: translateY(-50%) translateX(-50%);
+        z-index: 10000000;
+      }
+      .scrollContainer {
+        opacity: 0;
+        transition: opacity 0.2s ease-out;
+      }
+
+      .circle-loader {
+        position: relative;
+        width: auto;
+        height: auto;
+      }
+
+      .circle-loader div {
+        height: 10px;
+        width: 10px;
+        background-color: var(--color-accent-1);
+        border-radius: 50%;
+        position: absolute;
+        -webkit-animation: 0.8s opaque ease-in-out infinite both;
+        animation: 0.8s opaque ease-in-out infinite both;
+      }
+
+      .circle-loader div:nth-child(1) {
+        top: -25px;
+        left: 0;
+      }
+      .circle-loader div:nth-child(2) {
+        top: -17px;
+        left: 17px;
+        -webkit-animation-delay: 0.1s;
+        animation-delay: 0.1s;
+      }
+      .circle-loader div:nth-child(3) {
+        top: 0;
+        left: 25px;
+        -webkit-animation-delay: 0.2s;
+        animation-delay: 0.2s;
+      }
+      .circle-loader div:nth-child(4) {
+        top: 17px;
+        left: 17px;
+        -webkit-animation-delay: 0.3s;
+        animation-delay: 0.3s;
+      }
+      .circle-loader div:nth-child(5) {
+        top: 25px;
+        left: 0;
+        -webkit-animation-delay: 0.4s;
+        animation-delay: 0.4s;
+      }
+      .circle-loader div:nth-child(6) {
+        top: 17px;
+        left: -17px;
+        -webkit-animation-delay: 0.5s;
+        animation-delay: 0.5s;
+      }
+      .circle-loader div:nth-child(7) {
+        top: 0;
+        left: -23px;
+        -webkit-animation-delay: 0.6s;
+        animation-delay: 0.6s;
+      }
+      .circle-loader div:nth-child(8) {
+        top: -17px;
+        left: -17px;
+        -webkit-animation-delay: 0.7s;
+        animation-delay: 0.7s;
+      }
+
+      @keyframes opaque {
+        0% {
+          opacity: 0.1;
+        }
+        40% {
+          opacity: 1;
+        }
+        80% {
+          opacity: 0.1;
+        }
+        100% {
+          opacity: 0.1;
+        }
+      }
+    </style>
+  </head>
+<body class="{% if 'blog' in page.url %}blog{% else %}page{% endif %}">
+    <div class="h-100h">
+      <div class="preloader">
+        <div class="preloader_inner">
+          <div class="circle-loader">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="scrollContainer" id="pinSection">
+      <script>
+        var obj = document.querySelector('.preloader'),
+          page = document.querySelector('.scrollContainer');
+
+        window.addEventListener("load", function () {
+          obj.style.opacity = "0";
+          page.style.opacity = "1";
+        });
+      </script>
+      <header class="site-header">
+        <div class="container">
+          <div class="row g-3">
+            <div class="col-8 col-md-3 col-xl-2">
+              <div class="header-box d-flex align-items-center">
+                <a href="/" class="logo" title="Logo">
+                  <img src="/assets/img/logo/implanty-logo.png" class="site-logo" width="189" height="41" alt="Przemek Miros - Logo">
+                </a>
+              </div>
+            </div>
+            <div class="col-md-7 col-xl-8 d-none d-md-block">
+              <div class="header-box">
+              <nav class="desktop-nav">
+                <ul class="menu d-flex justify-content-between align-items-center">
+                  <li>
+                    <a href="/porady/informacje/" class="link-hover" title="Informacje">
+                      Informacje
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/porady/przygotowanie/" class="link-hover" title="Przygotowanie">
+                      Przygotowanie
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/porady/finansowanie/" class="link-hover" title="Finansowanie">
+                      Finansowanie
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/porady/pielegnacja/" class="link-hover" title="Pielęgnacja">
+                      Pielęgnacja
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/porady/ryzyko" class="link-hover" title="Ryzyko">
+                      Ryzyko
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/porady/trendy/" class="link-hover" title="Trendy">
+                      Trendy
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+            </div>
+            <div class="col-4 col-md-2 col-xl-2">
+              <div class="header-box d-flex justify-content-end">
+              <a href="/" title="Gabinet" class="button-anim btn-write d-none d-md-flex">
+                <div class="button-anim-text">
+                  <span>Gabinet</span>
+                  <span>Gabinet</span>
+                </div>
+                <div class="button-anim-icon">
+                  <svg class="icon-pencil" width="18" height="18" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <rect id="view-box" fill="none"/>
+                    <path id="Shape" d="M.75,17.5A.751.751,0,0,1,0,16.75V12.569a.755.755,0,0,1,.22-.53L11.461.8a2.72,2.72,0,0,1,3.848,0L16.7,2.191a2.72,2.72,0,0,1,0,3.848L5.462,17.28a.747.747,0,0,1-.531.22ZM1.5,12.879V16h3.12l7.91-7.91L9.41,4.97ZM13.591,7.03l2.051-2.051a1.223,1.223,0,0,0,0-1.727L14.249,1.858a1.222,1.222,0,0,0-1.727,0L10.47,3.91Z" transform="translate(3.25 3.25)" stroke-width="2px" fill="#fff"/>
+                  </svg>
+                  <div class="icon-line"></div>
+                </div>
+              </a>
+              <button class="menu-toggle d-md-none" id="menuToggle" aria-label="Otwórz menu">
+                <span class="hamburger">
+                  <span class="burger-line bl-1"></span>
+                  <span class="burger-line bl-2"></span>
+                </span>
+              </button>
+            </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div id="swup" class="transition-fade">
+        <div class="scrollprogress-wrap">
+          <div class="scrollprogress"></div>
+        </div>
+          <section class="fullpage-menu">
+            <div class="fullpage-menu-inner container h-100">
+              <div class="menu-bg"></div>
+              <div class="d-flex w-100 h-100 align-items-center">
+                <nav class="main-menu w-100">
+                  <ul class="menu main-menu-list">
+                    <li>
+                      <a href="/porady/informacje/" title="Informacje">Informacje</a>
+                    </li>
+                    <div class="line-xh lx-op"></div>
+                    <li>
+                      <a href="/porady/przygotowanie/" title="Usługi">Przygotowanie</a>
+                    </li>
+                    <div class="line-xh lx-op"></div>
+                    <li>
+                      <a href="/porady/finansowanie/" title="Finansowanie">Finansowanie</a>
+                    </li>
+                    <div class="line-xh lx-op"></div>
+                    <li>
+                      <a href="/porady/pielegnacja/" title="Pielęgnacja">Pielęgnacja</a>
+                    </li>
+                    <div class="line-xh lx-op"></div>
+                    <li>
+                      <a href="/porady/ryzyko/" title="Ryzyko">Ryzyko</a>
+                    </li>
+                    <div class="line-xh lx-op"></div>
+                    <li>
+                      <a href="/porady/trendy/" title="Trendy">Trendy</a>
+                    </li>
+                    <div class="line-xh lx-op"></div>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+          </section>
+        <main class="main">
+
+          <div class="bg-noise"></div>
+

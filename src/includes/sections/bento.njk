@@ -1,0 +1,122 @@
+<section class="pb-large" data-scroll-section>
+  <div class="container">
+      <div class="bento-grid bento-column">
+        {% for post in collections.posts.slice(0, 8) %} 
+        <div class="bento-item">
+          <div class="p-4">
+
+                        <p class="archive-category uppercase mt-0 mb-2">
+                            {{ post.data.tags }}
+                        </p>
+                        <a href="{{ post.url }}" title="{{ post.data.title }}">
+                            <h3 class="h5 bento-item-title line-clamp-2 mt-0 mb-3">
+                                {{ post.data.title }}
+                            </h3>
+                        </a>
+                        <a href="{{ post.url }}" title="Czytaj" class="button magnetic mt-3" data-strength="100" data-strength-text="50">
+                            <span>Czytaj dalej</span>
+                            <svg width="11" height="11" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M13 1L1 13" stroke="var(--color-accent-1)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                <path d="M3 1H13V11" stroke="var(--color-accent-1)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                        </a>
+
+         </div>
+        </div>
+        {% endfor %} 
+      </div>
+  </div>
+</section>
+
+<style>
+
+.bento-column {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas: "social" "multiple" "consistency" "timing" "follower" "growth" "one" "content";
+  gap: 1.25rem;
+}
+
+.bento-item {
+  display: grid;
+  gap: 1.25rem;
+  padding: 0rem;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 1rem;
+}
+
+.bento-item:nth-child(1) {
+  grid-area: one;
+  background-color: var(--color-dark-1);
+}
+
+.bento-item:nth-child(1) .archive-category,
+.bento-item:nth-child(1) .bento-item-title {
+  color: var(--color-light-1);
+}
+
+.bento-item:nth-child(2) {
+  grid-area: social;
+  background-color: var(--color-accent-1);
+}
+
+.bento-item:nth-child(2) .archive-category,
+.bento-item:nth-child(2) .bento-item-title {
+  color: #fff
+}
+
+.bento-item:nth-child(3) {
+  grid-area: timing;
+  background-color: var(--color-light-2);
+}
+
+.bento-item:nth-child(4) {
+  grid-area: content;
+  background-color: var(--color-dark-2);
+}
+
+.bento-item:nth-child(4) .archive-category,
+.bento-item:nth-child(4) .bento-item-title {
+  color: var(--color-light-1);
+}
+
+.bento-item:nth-child(5) {
+  grid-area: multiple;
+  background-color: var(--color-light-2);
+}
+
+.bento-item:nth-child(6) {
+  grid-area: growth;
+  background-color: var(--color-light-2);
+}
+
+.bento-item:nth-child(7) {
+  grid-area: consistency;
+  background-color: var(--color-dark-2);
+}
+
+.bento-item:nth-child(7) .archive-category,
+.bento-item:nth-child(7) .bento-item-title {
+  color: var(--color-light-1);
+}
+
+.bento-item:nth-child(8) {
+  grid-area: follower;
+  background-color: var(--color-accent-1);
+}
+
+.bento-item:nth-child(8) .archive-category,
+.bento-item:nth-child(8) .bento-item-title {
+  color: #fff
+}
+
+@media screen and (min-width: 48rem) {
+  .bento-column {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-rows: 1fr 10rem 0.5fr 1fr;
+    grid-template-areas: "one social social timing" "content multiple consistency timing" "content multiple consistency timing" "content growth follower follower";
+  }
+
+}
+</style>

@@ -1,0 +1,52 @@
+---
+pagination: 
+    data: collections
+    size: 1
+    alias: tag
+    addAllPagesToCollections: true
+layout: layouts/base.njk
+permalink: /porady/{{tag | slugify}}/
+robots: noindex
+eleventyComputed:
+    title: Kategoria {{tag}}
+---
+
+<section class="pt-xlarge pb-large" data-scroll-section>
+    <div class="container">
+        <div class="row gx-4">
+            {% for post in collections[tag] %}
+                <div class="col-sm-6 col-lg-4 col-xl-3 pb-xsmall">
+                  <div class="post-card">
+                    <a href="{{ post.url }}" title="{{ post.data.title }}">
+                        <div class="post-thumb">
+                            <svg class="post-thumb-svg" viewBox="0 0 197 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0 0V25.9811C0 25.9811 1.7066 17.82 14.6419 17.82C27.5772 17.82 132.578 17.82 152.113 17.82C171.648 17.82 175.703 0 175.703 0H0Z" fill="var(--color-light-1)" />
+                                <path d="M196.849 0C173.012 0 174.306 11.0537 162.386 14.8985C162.386 14.8985 155.39 0 166.791 0H196.849Z" fill="var(--color-light-1)" />
+                            </svg>
+                            <div class="hover-img-wrap">
+                                <div class="image-wrapper">
+                                    <img src="{{ post.data.thumbnail }}" alt="{{ post.data.title }}" loading="lazy"/>
+                                </div>
+                            </div>  
+                        </div>
+                    </a>
+                    <div class="post-card-content">
+                    <p class="archive-category mb-3 fadein">
+                        {{ post.data.tags }}
+                    </p>
+                    <a href="{{ post.url }}" title="{{ post.data.title }}">
+                        <h3 class="h5 split-text-lines line-clamp-2 mt-0 mb-4">
+                            {{ post.data.title }}
+                        </h3>
+                    </a>
+                    <a href="{{ post.url }}" title="czytaj" class="button magnetic fadein mt-3" data-strength="100" data-strength-text="50">
+                        <span>Czytaj</span>
+                        <svg viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg" fill="none" height="11" width="11"><path d="M13 1L1 13" stroke-width="2" stroke="var(--color-accent-1)" stroke-linecap="round" stroke-linejoin="round"></path><path d="M3 1H13V11" stroke-width="2" stroke="var(--color-accent-1)" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                    </a>
+                    </div>
+                  </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>

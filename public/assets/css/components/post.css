@@ -1,0 +1,104 @@
+.hero-post {
+  position: relative;
+  overflow: hidden;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+.hero-post::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-accent-1);
+  z-index: 1;
+}
+
+.hero-post-image-wrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.hero-post-image {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+}
+
+.hero-post .breadcrumbs {
+  color: #fff;
+  opacity: 0.85;
+}
+
+.post-sidebar {
+  margin-top: 1.8em;
+}
+
+.post-author-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+  z-index: 9;
+}
+
+.post-author-wrap img {
+  margin-right: 1em;
+  width: 60px;
+  height: 60px;
+}
+
+.post-author-wrap span {
+  font-weight: 600;
+}
+
+.post-author-role {
+  display: inline-block;
+  margin-top: 0.5em;
+  font-size: 92%;
+  text-transform: uppercase;
+}
+
+.post-list-items,
+.related-posts {
+  background-color: var(--color-light-3);
+}
+
+.post-list-items a,
+.related-posts a {
+  transition: 0.2s ease-in-out;
+}
+
+.post-list-items li {
+  margin-bottom: 1.2em;
+}
+
+.post-banner {
+  margin-bottom: 2.5em;
+  border-radius: var(--radius-2);
+  background-color: var(--color-accent-1);
+  overflow: hidden;
+}
+
+.post-banner img {
+  height: 100%;
+  object-fit: cover;
+  object-position: left;
+}
+
+@media (min-width: 767px) {
+  .hero-post {
+    border-bottom-left-radius: 35px;
+    border-bottom-right-radius: 35px;
+  }
+  .post-list-items a:hover,
+  .related-posts a:hover {
+    color: var(--color-accent-2);
+  }
+}

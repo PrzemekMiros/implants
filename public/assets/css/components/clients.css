@@ -1,0 +1,111 @@
+.client-card {
+  position: relative;
+  padding: 3em 1em;
+  border: 1px solid rgba(153, 153, 153, 0.2431372549);
+}
+
+.client-card {
+  padding: 4.5em 0.75em;
+}
+
+.css-blurry-gradient-wrap {
+  position: relative;
+  height: 100%;
+}
+
+.css-blurry-gradient {
+  position: absolute;
+  top: 10%;
+  left: 75%;
+  transform: translate(-50%, -20%);
+  width: 80rem;
+  height: 80rem;
+  border-radius: 50% 120% 40% 80%;
+  filter: blur(50px);
+  background: radial-gradient(circle at 50% 50%, #4616bf, rgba(76, 0, 255, 0));
+  opacity: 0.15;
+}
+
+.dark .client-card img {
+  filter: brightness(0) invert(1);
+}
+
+@media (prefers-color-scheme: dark) {
+  .client-card img {
+    filter: brightness(0) invert(1);
+  }
+}
+@media (min-width: 459px) {
+  .client-card {
+    padding: 6em 3.5em;
+  }
+}
+@media (min-width: 767px) {
+  .client-card {
+    padding: 6em 1em;
+  }
+  .client-card:nth-child(1) {
+    border-top: none;
+    border-left: none;
+  }
+  .client-card:nth-child(2),
+  .client-card:nth-child(3) {
+    border-top: none;
+  }
+  .client-card:nth-child(4) {
+    border-top: none;
+    border-right: none;
+  }
+  .client-card:nth-child(5) {
+    border-bottom: none;
+    border-left: none;
+  }
+  .client-card:nth-child(6),
+  .client-card:nth-child(7) {
+    border-bottom: none;
+  }
+  .client-card:nth-child(8) {
+    border-bottom: none;
+    border-right: none;
+  }
+}
+@media (min-width: 1024px) {
+  .client-card {
+    padding: 6em 3em;
+  }
+}
+@media (max-width: 768px) {
+  .client-card:nth-child(1) {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+  }
+  .client-card:nth-child(2) {
+    border-top: none;
+    border-right: none;
+  }
+  .client-card:nth-child(3) {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+  }
+  .client-card:nth-child(4) {
+    border-right: none;
+  }
+  .client-card:nth-child(5) {
+    border-left: none;
+    border-right: none;
+  }
+  .client-card:nth-child(6) {
+    border-right: none;
+  }
+  .client-card:nth-child(7) {
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
+  }
+  .client-card:nth-child(8) {
+    border-bottom: none;
+    border-right: none;
+  }
+}

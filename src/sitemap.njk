@@ -1,0 +1,30 @@
+---
+permalink: /sitemap.xml
+eleventyExcludeFromCollections: true
+layout: null
+---
+<?xml version="1.0" encoding="utf-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    
+        <url>
+            <loc>
+                https://implantylegionowo.pl/
+            </loc>
+            <lastmod>{{ page.date.toISOString() }}</lastmod>
+        </url> 
+
+        <url>
+            <loc>
+                https://implantylegionowo.pl/mapa-strony/
+            </loc>
+            <lastmod>{{ page.date.toISOString() }}</lastmod>
+        </url>
+       
+    {% for page in collections.posts %}
+        <url>
+            <loc>https://implantylegionowo.pl{{ page.url | url }}</loc>
+            <lastmod>{{ page.date.toISOString() }}</lastmod>
+        </url> 
+    {% endfor %}
+
+</urlset>

@@ -1,0 +1,68 @@
+---
+layout: layouts/base.njk
+title: Mapa strony
+description: Mapa witryny
+---
+
+<section class="pt-xlarge pb-xlarge" data-scroll-section>
+  <div class="container">
+    <div class="col-md-6 mx-auto">
+
+        <h2 class="split-text-lines">Strony</h2>
+        <div class="line-x"></div>
+        <ul class="pt-xsmall">
+            <li class="fadeIn my-4">
+              <a href="/realizacje/" title="Realizacje">Realizacje</a>
+            </li>
+            <div class="line-x lx-op"></div>
+            <li class="fadeIn my-4">
+                <a href="/blog/" title="Artykuły">Artykuły</a>
+            </li>
+            <div class="line-x lx-op"></div>
+            <li class="fadeIn my-4">
+                <a href="/wycena/" title="Wycena">Wycena</a>
+            </li>
+            <div class="line-x lx-op"></div>
+            <li class="fadeIn my-4">
+                <a href="/kontakt/" title="Kontakt">Kontakt</a>
+            </li>
+            <div class="line-x lx-op"></div>
+        </ul>
+    
+      <h2 class="split-text-lines">Artykuły</h2>
+      <div class="line-x"></div>
+
+      <ul class="pt-xsmall pb-small">
+        {% for page in collections.posts %}
+        <li class="fadeIn my-4">
+          <a href="{{ page.url | url }}" class="hover-color" title="{{ page.data.title }}">{{ page.data.title }}</a>
+        </li>
+        <div class="line-x lx-op"></div>
+        {% endfor %}
+      </ul>
+
+      <h2 class="split-text-lines">Uslugi</h2>
+      <div class="line-x"></div>
+
+      <ul class="pt-xsmall pb-small">
+        <li class="fadeIn my-4">
+            <a href="/uslugi/strony-internetowe/" title="Strony internetowe">Strony internetowe</a>
+        </li>
+        <div class="line-x lx-op"></div>
+      </ul>
+
+      <h2 class="split-text-lines">Pozycjonowanie</h2>
+      <div class="line-x"></div>
+
+      <ul class="pt-xsmall pb-small">
+      {% for page in collections.towns %}
+        <li class="fadeIn my-4"> 
+          <a href="{{ page.url | url }}" class="hover-color" title="{{ page.data.title }}">{{ page.data.title }}</a>
+        </li>
+        <div class="line-x lx-op"></div>
+      {% endfor %}
+      </ul>
+
+    </div>
+  </div>
+</section>

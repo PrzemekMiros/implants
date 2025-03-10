@@ -1,0 +1,77 @@
+.opinion-card {
+  position: relative;
+  width: 100%;
+  background-image: url("/assets/img/opinion/opinion-bg.svg");
+  background-position: 100% 0px;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  border-bottom-right-radius: 25px;
+  border-bottom-left-radius: 25px;
+  border-top-left-radius: 25px;
+}
+
+.opinion-card::before {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: var(--color-accent-1);
+  background-size: 100% auto;
+  border-bottom-right-radius: 25px;
+  border-bottom-left-radius: 25px;
+}
+
+.opinion-card-content {
+  min-height: 310px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.opinion-card .line-x {
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+}
+
+.opinion-card img {
+  position: relative;
+  margin-right: 1em;
+  width: 50px;
+  height: 50px;
+}
+
+.opinion-card-content .content {
+  font-size: 95%;
+}
+
+.opinion-card .name,
+.opinion-card .company {
+  font-size: 90%;
+}
+
+.opinion-card .name {
+  margin-top: 0;
+  margin-bottom: 0.1em;
+}
+
+.opinion-card .company {
+  margin-top: 0;
+  margin-bottom: 0;
+  opacity: 0.5;
+}
+
+@media (min-width: 767px) {
+  .opinion-card {
+    background-size: cover;
+  }
+  .opinion-card .line-x {
+    margin-top: 2.5em;
+    margin-bottom: 2.5em;
+  }
+  .opinion-card-content {
+    min-height: 360px;
+  }
+}

@@ -1,0 +1,132 @@
+--- 
+layout: "layouts/base.njk"
+title: Porady
+description: Artykuły i ciekawostki 
+pagination: 
+    data: collections.posts 
+    size: 12 
+    alias: blog
+--- 
+
+<section class="hero pt-large pt-md-xlarge pb-small pb-md-medium" data-scroll-section>
+    <div class="container">
+        <div class="row g-4">
+            <div class="col-md-8 col-xl-7">
+                <div class="hero-card hero-card-shape bg-accent-1">
+                    <svg class="hero-card-shape-svg" viewBox="0 0 691 53" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 0V53C0 53 3.96649 35 28.2612 35C52.556 35 570.005 34.98 606.695 34.98C643.385 34.98 651 0 651 0H0Z" fill="var(--color-light-1)" />
+                        <path d="M690.717 0C645.947 0 648.377 21.6981 625.99 29.2453C625.99 29.2453 612.849 0 634.262 0H690.717Z" fill="var(--color-light-1)" />
+                    </svg>
+                    <div class="hero-card-content p-4 py-5 p-md-5">
+                        <p class="h5 fade-in mb-3 mt-2 mt-md-4 color-light">Główna | {{ title }}</p>
+                        <h1 class="xxl split-lines my-2 my-md-3 uppercase color-light">Porady i ciekawostki</h1>
+                        <div class="line-x my-4"></div>
+                        <div class="row g-3 align-items-center">
+                            <div class="col-3 col-md-2 fade-in">
+                                <img src="/assets/img/hero/avatar.png" class="fade-in" style="width:55px; height:55px;" alt="Przemek Miros - Avatar">
+                            </div>
+                            <div class="col-9 col-md-8">
+                                <p class="h5 my-0 color-light split-lines"> Porady i ciekawostki na temat stron internetowych </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-xl-5 d-none d-md-block">
+                <div class="hero-card bg-dark d-md-flex align-items-center">
+                    <div class="p-2 fade-in">
+                        <video autoplay loop poster="/assets/img/video/movie-5-poster.png">
+                            <source src="/assets/img/video/movie-5.webm">
+                        </video>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="pb-xxsmall pb-md-small" data-scroll-section>
+    <div class="container">
+        <div class="row gx-2 pb-small d-none d-md-flex justify-content-center fade-in">
+            <div class="col-auto">
+                <a href="/porady/" class="category-btn magnetic link-active" data-strength="50" title="Strony www">
+                    <span class="btn-text">Wszystkie </span>
+                </a>
+            </div>
+            <div class="col-auto">
+                <a href="/porady/strony-www/" class="category-btn magnetic" data-strength="50" title="Strony www">
+                    <span class="btn-text"> Strony www </span>
+                </a>
+            </div>
+            <div class="col-auto">
+                <a href="/porady/pozycjonowanie/" class="category-btn magnetic" data-strength="50" title="Pozycjonowanie">
+                    <span class="btn-text"> Pozycjonowanie </span>
+                </a>
+            </div>
+            <div class="col-auto">
+                <a href="/porady/marketing/" class="category-btn magnetic" data-strength="50" title="Marketing">
+                    <span class="btn-text"> Marketing </span>
+                </a>
+            </div>
+            <div class="col-auto">
+                <a href="/porady/wordpress/" class="category-btn magnetic" data-strength="50" title="Wordpress">
+                    <span class="btn-text"> Wordpress </span>
+                </a>
+            </div>
+            <div class="col-auto">
+                <a href="/porady/poradniki/" class="category-btn magnetic" data-strength="50" title="Wordpress">
+                    <span class="btn-text"> Poradniki </span>
+                </a>
+            </div>
+        </div>
+        <div class="row gx-4 fade-in"> 
+          {% for post in blog %} 
+              <div class="col-sm-6 col-lg-4 pb-xsmall">
+                <div class="post-card">
+                    <a href="{{ post.url }}" title="{{ post.data.title }}">
+                        <div class="post-thumb">
+                            <svg class="post-thumb-svg" viewBox="0 0 197 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_3772_2)">
+                                    <path d="M0 0V29.5C0 29.5 1.7066 17.82 14.6419 17.82C27.5772 17.82 132.578 17.82 152.113 17.82C171.648 17.82 175.703 0 175.703 0H0Z" fill="var(--color-light-1)" />
+                                    <path d="M196.849 0C173.012 0 174.306 11.0537 162.386 14.8985C162.386 14.8985 155.39 0 166.791 0H196.849Z" fill="var(--color-light-1)" />
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_3772_2">
+                                        <rect width="197" height="30" fill="var(--color-light-1)" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                            <div class="hover-img-wrap"> {% blogImage "src/" + post.data.thumbnail, post.data.title %} </div>
+                        </div>
+                    </a>
+                    <div class="post-card-content">
+                        <p class="archive-category uppercase mt-3 mb-2">
+                            {{ post.data.tags }}
+                        </p>
+                        <a href="{{ post.url }}" title="{{ post.data.title }}">
+                            <h3 class="h5 line-clamp-2 mt-0 mb-3">
+                                {{ post.data.title }}
+                            </h3>
+                        </a>
+                        <a href="{{ post.url }}" title="Czytaj" class="button magnetic mt-3" data-strength="100" data-strength-text="50">
+                            <span>Czytaj dalej</span>
+                            <svg width="11" height="11" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M13 1L1 13" stroke="var(--color-accent-1)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                <path d="M3 1H13V11" stroke="var(--color-accent-1)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+              </div> 
+          {% endfor %} 
+        </div>
+        <div class="row gx-4">
+            <div class="col-md-6">
+                <nav>
+                    <ul class="pagination d-flex"> {%- for pageEntry in pagination.pages %} <li class="pagination-item">
+                            <a class="pagination-link magnetic" data-strength="60" title="Paginacja" href="{{ pagination.hrefs[ loop.index0 ] }}" {% if page.url == pagination.hrefs[ loop.index0 ] %} aria-current="active" {% endif %}>{{ loop.index }}</a>
+                        </li> {%- endfor %} </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</section>
