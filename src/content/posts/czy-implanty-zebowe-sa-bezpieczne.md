@@ -4,7 +4,7 @@ description: Implanty zębowe to jedno z najczęściej wybieranych rozwiązań w
 date: 2022-12-06T19:43:40.029Z
 author: Przemek Miros
 tags: 
-  - informacje
+  - pielęgnacja
 thumbnail: /content/posts/img/czy-implanty-sa-bezpieczne.jpg
 ---
 

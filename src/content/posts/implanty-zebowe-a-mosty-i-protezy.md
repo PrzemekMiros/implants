@@ -4,7 +4,7 @@ description: Utrata zębów może negatywnie wpłynąć na wygląd, komfort życ
 author: Przemek Miros
 date: 2021-11-19T22:37:00.000Z
 tags:
-  - informacje
+  - ryzyko
 thumbnail: /content/posts/img/mosty-i-protezy.jpg
 ---
 

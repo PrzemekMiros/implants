@@ -1,7 +1,8 @@
 
 :root,.light {
-    --color-accent-1: #00afa6;
-    --color-accent-2: #9f5bff;
+    --color-accent-1: #6995ec;
+    --color-accent-2: #9777e9;
+    --color-accent-3: #47c27c;
     --color-dark-1: #080714;
     --color-dark-2: #131227;
     --color-light-1: #f5f5f9;
@@ -11,7 +12,7 @@
     --color-text: #5e6265;
     --color-border: #74787b87;
 }
-
+/*
 @media (prefers-color-scheme:dark) { 
     :root {
     --color-dark-1: #f8f8fd;
@@ -24,7 +25,7 @@
     --color-border: #74787b87;
     }
   }
-
+*/
   .bg-light {
     background-color: #fdfdfd;
   }
@@ -51,6 +52,9 @@
   }
   .bg-accent-2 {
     background-color: var(--color-accent-2)
+  }
+  .bg-accent-3 {
+    background-color: var(--color-accent-3)
   }
 
   .color-accent-1 {

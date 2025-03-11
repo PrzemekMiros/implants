@@ -34,8 +34,9 @@
   border-radius: 0;
 }
 .logo img {
-  max-width: 205px;
-  height: auto
+  max-width: 70%;
+  height: auto;
+  margin: auto;
 }
 
 .desktop-nav {
@@ -78,31 +79,6 @@
   background-color: #fff;
 }
 
-.blog .site-header:not(.scrolled)::before {
-  background-color: transparent;
-}
-
-.blog .site-header:not(.scrolled) .logo {
-  filter: invert(1);
-}
-
-.blog .site-header:not(.scrolled) .desktop-nav ul li a {
-  color: #fff;
-}
-
-.blog .site-header:not(.scrolled) .desktop-nav ul li span {
-  color: #ddd;
-}
-
-.blog.menu-open .site-header .logo {
-  filter: invert(0);
-}
-
-@media (prefers-color-scheme:dark) { 
-.blog .site-header:not(.scrolled) .logo {
-  filter: invert(0);
-}
-}
 
 .menu-toggle {
   width: 44px;

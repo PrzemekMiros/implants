@@ -1,0 +1,105 @@
+<section class="pb-small pb-md-medium" data-scroll-section>
+    <div class="container p-relative">
+      <div class="row">
+        <div class="col-md-3 cat-card-wrap">
+            <a href="/porady/informacje/">
+                <div class="category-card">
+                    <div class="cat-card-image">
+                        <img src="/content/posts/img/czego-sie-spodziewac.jpg" alt="">
+                    </div>
+                    <div class="cat-card-content">
+                        <h3 class="color-light">
+                            Informacje
+                        </h3>
+                    </div>
+                </div>
+            </a>
+        </div> 
+        <div class="col-md-3 cat-card-wrap">
+            <a href="/porady/przygotowanie/">
+            <div class="category-card">
+                <div class="cat-card-image">
+                    <img src="/content/posts/img/co-to-sa-implanty.jpg" alt="">
+                </div>
+                <div class="cat-card-content">
+                    <h3 class="color-light">
+                        Przygotowanie
+                    </h3>
+                </div>
+            </div>
+            </a>
+        </div> 
+        <div class="col-md-3 cat-card-wrap">
+            <a href="/porady/finansowanie/">
+            <div class="category-card">
+                <div class="cat-card-image">
+                    <img src="/content/posts/img/finans.jpg" alt="">
+                </div>
+                <div class="cat-card-content">
+                    <h3 class="color-light">
+                        Finansowanie
+                    </h3>
+                </div>
+            </div>
+            </a>
+        </div> 
+        <div class="col-md-3 cat-card-wrap">
+            <a href="/porady/pielegnacja/">
+            <div class="category-card">
+                <div class="cat-card-image">
+                    <img src="/content/posts/img/pielegnacja.jpg" alt="">
+                </div>
+                <div class="cat-card-content">
+                    <h3 class="color-light">
+                        Pielęgnacja
+                    </h3>
+                </div>
+            </div>
+            </a>
+        </div> 
+      </div>
+    </div>
+  </section>
+
+  
+<style>
+    .category-card {
+      position: relative;
+      border-radius: 15px;
+      overflow: hidden;
+    }
+    .cat-card-image {
+      position: relative;
+    }
+    .cat-card-image::before {
+      position: absolute;
+      content: "";
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      opacity: .95
+    }
+    .cat-card-wrap:nth-child(1) .cat-card-image:before {
+      background: var(--color-accent-1)
+    }
+    .cat-card-wrap:nth-child(2) .cat-card-image:before {
+      background: var(--color-accent-2)
+    }
+    .cat-card-wrap:nth-child(3) .cat-card-image:before {
+      background: var(--color-accent-3)
+    }
+    .cat-card-wrap:nth-child(4) .cat-card-image:before {
+      background: var(--color-accent-1)
+    }
+    .cat-card-image img {
+      aspect-ratio: 5/6;
+      object-fit: cover;
+    }
+    .cat-card-content {
+      position: absolute;
+      width: 63%;
+      bottom: 1.2em;
+      left: 2em;
+    }
+  </style>

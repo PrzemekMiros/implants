@@ -4,7 +4,7 @@ description: Decyzja o wszczepieniu implantów zębowych to ważny krok w kierun
 author: Przemek
 date: 2024-11-05
 tags:
-  - informacje
+  - finansowanie
 thumbnail: /content/posts/img/czego-sie-spodziewac.jpg
 ---
 # Czego się spodziewać po pierwszych dniach z implantami?
