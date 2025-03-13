@@ -9,7 +9,7 @@
 }
 
 .site-header-wrap {
-  padding: .5em 0;
+  padding: 0.5em 20px;
   background-color: #fff;
   border-radius: 35px;
 }
@@ -42,7 +42,6 @@
 .logo img {
   max-width: 50%;
   height: auto;
-  margin: auto;
 }
 
 .desktop-nav {
@@ -237,6 +236,11 @@
     top: 23px;
     width:100%
   }   
+  .site-header-wrap {
+    padding: .5em 0;
+    background-color: #fff;
+    border-radius: 35px;
+  }
   .site-header.scrolled {
     transform: translateY(0%);
   }

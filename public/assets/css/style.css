@@ -5217,7 +5217,7 @@ html.lenis, html.lenis body {
 }
 
 .site-header-wrap {
-  padding: 0.5em 0;
+  padding: 0.5em 20px;
   background-color: #fff;
   border-radius: 35px;
 }
@@ -5252,7 +5252,6 @@ html.lenis, html.lenis body {
 .logo img {
   max-width: 50%;
   height: auto;
-  margin: auto;
 }
 
 .desktop-nav {
@@ -5457,6 +5456,11 @@ html.lenis, html.lenis body {
     top: 23px;
     width: 100%;
   }
+  .site-header-wrap {
+    padding: 0.5em 0;
+    background-color: #fff;
+    border-radius: 35px;
+  }
   .site-header.scrolled {
     transform: translateY(0%);
   }
@@ -5474,6 +5478,7 @@ html.lenis, html.lenis body {
   }
 }
 .button-anim {
+  width: fit-content;
   display: inline-flex;
   align-items: center;
   padding: 0.4em 0.35em 0.3em 1.5em;
