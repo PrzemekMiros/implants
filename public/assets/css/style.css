@@ -4110,8 +4110,8 @@
 }
 :root, .light {
   --color-accent-1: #C7B679;
-  --color-accent-2: #7999C7;
-  --color-accent-3: #8B79C7;
+  --color-accent-2: #bbac76;
+  --color-accent-3: #b6a979;
   --color-dark-1: #080714;
   --color-dark-2: #131227;
   --color-light-1: #f5f5f9;
@@ -5457,7 +5457,7 @@ html.lenis, html.lenis body {
     width: 100%;
   }
   .site-header-wrap {
-    padding: 0.5em 0;
+    padding: 0.5em 1em;
     background-color: #fff;
     border-radius: 35px;
   }
