@@ -1,13 +1,29 @@
-<section class="hero pt-medium pb-medium" data-scroll-section>
+<section class="hero pt-large pb-medium" data-scroll-section>
   <div class="container">
     <div class="first-post">
       <div class="first-post-image">
         <img src="/content/posts/img/czego-sie-spodziewac.jpg" alt="">
       </div>
       <div class="first-post-content">
-        <h1 class="xl color-light">
+        <h1 class="xl mb-3 color-light">
           Implanty stomatologiczne 
         </h1>
+        <p class="color-light">
+          Jesteśmy specjalistami i pasjonatami swojego zawodu. Dbamy o dobry kontakt z pacjentami, dużą uwagę przykładamy do tego, aby leczenie było dostosowane do potrzeb i oczekiwań pacjentów.
+        </p>
+        <a href="tel:+48666600230" class="link-hover color-light mb-3 d-inline-block" title="Zadzwoń"> 
+          <svg width="16" height="16" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M14.16 8C14.4 11.56 15 15.04 15.96 18.36L11.16 23.16C9.52 18.36 8.48 13.28 8.12 8H14.16ZM53.6 56.08C57 57.04 60.48 57.64 64 57.88V63.84C58.72 63.48 53.64 62.44 48.8 60.84L53.6 56.08ZM18 0H4C1.8 0 0 1.8 0 4C0 41.56 30.44 72 68 72C70.2 72 72 70.2 72 68V54.04C72 51.84 70.2 50.04 68 50.04C63.04 50.04 58.2 49.24 53.72 47.76C53.32 47.6 52.88 47.56 52.48 47.56C51.44 47.56 50.44 47.96 49.64 48.72L40.84 57.52C29.52 51.72 20.24 42.48 14.48 31.16L23.28 22.36C24.4 21.24 24.72 19.68 24.28 18.28C22.8 13.8 22 9 22 4C22 1.8 20.2 0 18 0Z" fill="var(--color-accent-1)"/>
+          </svg>                       
+          +48 666 600 230
+        </a>
+        &nbsp; &nbsp;<br class="d-md-none">
+        <a href="mailto:orthoroom.Lwo@gmail.com" class="link-hover color-light mb-3 d-inline-block" title="Wyślij wiadomość"> 
+          <svg width="22" height="16" viewBox="0 0 80 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M80 8C80 3.6 76.4 0 72 0H8C3.6 0 0 3.6 0 8V56C0 60.4 3.6 64 8 64H72C76.4 64 80 60.4 80 56V8ZM72 8L40 28L8 8H72ZM72 56H8V16L40 36L72 16V56Z" fill="var(--color-accent-1)"/>
+          </svg>            
+          orthoroom.Lwo@gmail.com
+        </a>
       </div>
     </div>
   </div>
@@ -29,20 +45,34 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgb(255,255,255);
-    background: linear-gradient(180deg, rgba(255,255,255,0) 35%, rgba(0,0,0,1) 100%); 
-  opacity: .6;
-  mix-blend-mode: multiply;
+    background: rgb(0,0,0);
+    background: linear-gradient(210deg, rgba(0, 0, 0, 0.176) 25%, rgba(0,0,0,1) 100%); 
+    opacity: 1;
+    mix-blend-mode: multiply;
   }
   .first-post-image img {
-    aspect-ratio: 4/2;
+    aspect-ratio: 5/8;
     object-fit: cover;
   }
   .first-post-content {
     position: absolute;
-    width: 63%;
-    bottom: 2em;
-    left: 2em;
+    width: 100%;
+    bottom: 5em;
+    left: 1.2em;
+  }
+  @media(min-width:767px) {
+    .first-post-image::before {
+    background: rgb(0,0,0);
+    background: linear-gradient(210deg, rgba(255,255,255,0) 45%, rgba(0,0,0,1) 100%); 
+    opacity: .85;
+  }
+    .first-post-image img {
+    aspect-ratio: 4/2;
+  }
+  .first-post-content {
+    width: 50%;
+    left: 2.2em;
+  }
   }
 </style>
 

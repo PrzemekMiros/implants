@@ -4109,9 +4109,9 @@
   }
 }
 :root, .light {
-  --color-accent-1: #6995ec;
-  --color-accent-2: #9777e9;
-  --color-accent-3: #47c27c;
+  --color-accent-1: #C7B679;
+  --color-accent-2: #7999C7;
+  --color-accent-3: #8B79C7;
   --color-dark-1: #080714;
   --color-dark-2: #131227;
   --color-light-1: #f5f5f9;
@@ -4847,7 +4847,7 @@ li {
   font-family: var(--font-primary);
   font-size: 4.75vw;
   font-weight: 400;
-  line-height: 1.7;
+  line-height: 1.6;
   color: var(--color-text);
 }
 
@@ -5209,11 +5209,17 @@ html.lenis, html.lenis body {
 .site-header {
   position: fixed;
   left: 0;
-  top: 0;
+  top: 25px;
   width: 100%;
   transform: translateY(0);
   transition: all 0.3s ease-in-out;
   z-index: 9999;
+}
+
+.site-header-wrap {
+  padding: 0.5em 0;
+  background-color: #fff;
+  border-radius: 35px;
 }
 
 .site-header.hide {
@@ -5222,7 +5228,7 @@ html.lenis, html.lenis body {
 }
 
 .site-header.scrolled {
-  transform: translateY(-100%);
+  transform: translateY(0%);
 }
 
 .menu-open .site-header.hide {
@@ -5244,7 +5250,7 @@ html.lenis, html.lenis body {
 }
 
 .logo img {
-  max-width: 70%;
+  max-width: 50%;
   height: auto;
   margin: auto;
 }
@@ -5281,12 +5287,9 @@ html.lenis, html.lenis body {
   cursor: default;
 }
 
-.header-box {
-  height: 100%;
-  width: 100%;
-  min-height: 60px;
-  border-radius: 15px;
-  background-color: #fff;
+.header-box .button-anim {
+  background: #fff;
+  color: var(--color-dark-1);
 }
 
 .menu-toggle {
@@ -5451,11 +5454,11 @@ html.lenis, html.lenis body {
 @media (min-width: 767px) {
   .site-header {
     left: 0;
-    top: 15px;
+    top: 23px;
     width: 100%;
   }
   .site-header.scrolled {
-    transform: translateY(-100%);
+    transform: translateY(0%);
   }
   .button-header:hover::before {
     width: 100%;
@@ -5477,7 +5480,7 @@ html.lenis, html.lenis body {
   border-radius: 55px;
   border: none;
   font-size: 0.8rem;
-  font-weight: 600;
+  font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 1px;
   background: var(--color-dark-1);

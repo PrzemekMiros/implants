@@ -1,6 +1,6 @@
 <section class="pb-small pb-md-medium" data-scroll-section>
     <div class="container p-relative">
-      <div class="row">
+      <div class="row gx-3">
         <div class="col-md-3 cat-card-wrap">
             <a href="/porady/informacje/">
                 <div class="category-card">
@@ -63,6 +63,9 @@
 
   
 <style>
+    .cat-card-wrap {
+      margin-bottom: 20px;
+    }
     .category-card {
       position: relative;
       border-radius: 15px;
@@ -93,13 +96,19 @@
       background: var(--color-accent-1)
     }
     .cat-card-image img {
-      aspect-ratio: 5/6;
+      aspect-ratio: 11/6;
       object-fit: cover;
     }
     .cat-card-content {
       position: absolute;
       width: 63%;
-      bottom: 1.2em;
+      top: 1em;
       left: 2em;
+    }
+    @media(min-width: 767px) {
+      .cat-card-image img {
+      aspect-ratio: 5/6;
+      object-fit: cover;
+    }
     }
   </style>

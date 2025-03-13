@@ -1,11 +1,17 @@
 .site-header {
   position: fixed;
   left: 0; 
-  top: 0;
+  top: 25px;
   width: 100%;
   transform: translateY(0);
   transition: all .3s ease-in-out;
   z-index: 9999
+}
+
+.site-header-wrap {
+  padding: .5em 0;
+  background-color: #fff;
+  border-radius: 35px;
 }
 
 .site-header.hide {
@@ -14,7 +20,7 @@
 }
 
 .site-header.scrolled {
-  transform: translateY(-100%);
+  transform: translateY(0%);
 }
 
 .menu-open .site-header.hide {
@@ -34,7 +40,7 @@
   border-radius: 0;
 }
 .logo img {
-  max-width: 70%;
+  max-width: 50%;
   height: auto;
   margin: auto;
 }
@@ -71,12 +77,9 @@
   cursor: default
 }
 
-.header-box {
-  height: 100%;
-  width: 100%;
-  min-height: 60px;
-  border-radius: 15px;
-  background-color: #fff;
+.header-box .button-anim {
+  background: #fff;
+  color: var(--color-dark-1);
 }
 
 
@@ -231,11 +234,11 @@
 @media(min-width:767px) {
   .site-header {
     left:0; 
-    top: 15px;
+    top: 23px;
     width:100%
   }   
   .site-header.scrolled {
-    transform: translateY(-100%);
+    transform: translateY(0%);
   }
 .button-header:hover::before {
     width: 100%
