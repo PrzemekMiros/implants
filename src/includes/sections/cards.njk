@@ -81,6 +81,7 @@
       left: 0;
       right: 0;
       bottom: 0;
+      transition: .3s ease-in-out;
       opacity: .95
     }
     .cat-card-wrap:nth-child(1) .cat-card-image:before {
@@ -96,16 +97,29 @@
       background: var(--color-accent-1)
     }
     .cat-card-image img {
+      position: relative;
       aspect-ratio: 11/6;
       object-fit: cover;
+      transition: .3s ease-in-out;
+      z-index: -1;
     }
     .cat-card-content {
       position: absolute;
       width: 63%;
       top: 1em;
       left: 2em;
+      transition: .3s ease-in-out;
     }
     @media(min-width: 767px) {
+      .category-card:hover .cat-card-image img {
+      transform: scale(1.1);
+    }
+      .category-card:hover .cat-card-image::before {
+      opacity: .25
+    }
+    .category-card:hover .cat-card-content {
+      opacity: 0
+    }
       .cat-card-image img {
       aspect-ratio: 5/6;
       object-fit: cover;
